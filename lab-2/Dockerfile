@@ -6,4 +6,4 @@ RUN go build -o hello main.go
 FROM alpine:latest
 WORKDIR /app
 COPY --from=builder /app/hello .
-ENTRYPOINT ["./hello"]  
+ENTRYPOINT ["./hello"]

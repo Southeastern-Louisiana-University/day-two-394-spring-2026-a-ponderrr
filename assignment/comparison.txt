@@ -1,0 +1,7 @@
+Build image (ubuntu:24.04 + Go installed + binary compiled): 621MB
+Run image (alpine + binary only):                           17.4MB
+
+The multi-stage build reduces the final image size by ~97%.
+The build image is large because it includes Ubuntu, curl, ca-certificates,
+and the full Go toolchain. The run image only contains Alpine and the
+statically compiled binary.
